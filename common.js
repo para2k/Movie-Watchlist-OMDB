@@ -1,4 +1,4 @@
-export const apiKey = "812dcec8";
+export const apiKey = import.meta.env.OMDB_API_KEY;
 
 export async function getMovieDetails(movieId) {
     const response = await fetch(`https://www.omdbapi.com/?apikey=${apiKey}&i=${movieId}`);
