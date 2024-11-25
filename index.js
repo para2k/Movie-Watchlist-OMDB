@@ -6,13 +6,15 @@ const movieList = document.getElementById("movie-list");
 const moviesSect = document.getElementById("movies-sect");
 
 movieList.addEventListener('click', (e) => {
-    if (e.target.id === "add-to-watchlist-btn") {
-        saveToWatchlist(e.target.dataset.movieId);
-        switchToRemoveButton(e.target);
+    const button = e.target.closest(".icon-button");
+    if(!button) return;
+    if (button.id === "add-to-watchlist-btn" ) {
+        saveToWatchlist(button.dataset.movieId);
+        switchToRemoveButton(button);
     }
-    else if (e.target.id === "remove-from-watchlist-btn") {
-        removeFromWatchlist(e.target.dataset.movieId);
-        switchToAddButton(e.target);
+    else if (button.id === "remove-from-watchlist-btn") {
+        removeFromWatchlist(button.dataset.movieId);
+        switchToAddButton(button);
     }
 })
 
