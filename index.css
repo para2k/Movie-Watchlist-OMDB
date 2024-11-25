@@ -28,7 +28,7 @@ h3 {
     justify-content: space-around;
     height: 30vh;
     background-color: black;
-    background-image: url("images/header.png");
+    background-image: url("images/header.webp");
     background-size: cover;
     background-position: center;
 }
